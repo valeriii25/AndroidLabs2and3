@@ -1,10 +1,13 @@
 package com.example.androidlabs2and3
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.PorterDuff
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
+import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlabs2and3.databinding.ProductCardBinding
 
@@ -27,11 +30,8 @@ class ProductAdapter : RecyclerView.Adapter<ProductHolder>() {
         val product = products[position]
         holder.binding.isFavorite.setOnClickListener{
             product.isFavorite = !product.isFavorite
-            holder.binding.isFavorite.setColorFilter(
-                ActivityCompat.getColor(context, if (product.isFavorite) R.color.red
-                else R.color.grey), PorterDuff.Mode.MULTIPLY
-            )
         }
+
         holder.binding.productName.text = product.name
         holder.binding.productImage.setImageResource(product.jpgID)
         holder.binding.productPrice.text = product.price.toString()
