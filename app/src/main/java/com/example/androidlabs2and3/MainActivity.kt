@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         adapter.add(Product(R.drawable.pic4, "Носки", 299.99, false))
         adapter.add(Product(R.drawable.pic5, "Кепка", 1399.99, false))
         adapter.add(Product(R.drawable.pic6, "Кроссовки", 4299.99, false))
+        adapter.add(Product(R.drawable.pic7, "Ботинки", 5299.99, false))
+        adapter.add(Product(R.drawable.pic8, "Шлепки", 2299.99, false))
         setContentView(mainActivityBinding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
